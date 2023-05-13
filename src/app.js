@@ -10,6 +10,9 @@ app.use(express.static('public'))
 // Global Variables
 var items = [];
 
+app.get("/healthz", (req,res) => {
+    res.send("OK");
+})
 
 app.get("/", (req, res) => {
 
